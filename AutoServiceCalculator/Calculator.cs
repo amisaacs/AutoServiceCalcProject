@@ -31,7 +31,7 @@ namespace AutoServiceCalculator
         }
         public decimal getLaborCharge()
         {
-            return 15.00m;
+            return _laborhours * 20;
         }
         public decimal getTax()
         {
@@ -48,7 +48,7 @@ namespace AutoServiceCalculator
         {
             _partname = "oil";
             _partprice = 11.00m;
-            _laborhours = 0.45m;
+            _laborhours = 0.75m;    //45 minutes
         }
 
     }
@@ -58,7 +58,7 @@ namespace AutoServiceCalculator
         {
             _partname = "grease";
             _partprice = 3.00m;
-            _laborhours = 0.45m;
+            _laborhours = 0.75m;    // 45 minutes
         }
     }
 }
