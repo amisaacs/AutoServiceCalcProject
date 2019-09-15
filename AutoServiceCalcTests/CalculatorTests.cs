@@ -545,13 +545,21 @@ namespace AutoServiceCalcTests
         }
 
         [TestMethod]
-
         public void GivenOIlChangeAndLubeJobOjectsRepairBillCanBeCreated()
         {
             OilChange s1 = new OilChange();
             LubeJob s2 = new LubeJob();
             RepairBill bill = new RepairBill(s1, s2);
             Assert.IsNotNull(bill);
+        }
+        [TestMethod]
+        public void GivenOIlChangeAndLubeJobOjectsPartTotalIsCorrect()
+        {
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RepairBill bill = new RepairBill(s1, s2);
+            decimal total = bill.getPartTotal();
+            Assert.AreEqual(14.00m,total);
         }
     }
 
