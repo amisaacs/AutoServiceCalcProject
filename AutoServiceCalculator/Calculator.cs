@@ -90,4 +90,13 @@ namespace AutoServiceCalculator
             _laborhours = 2.0m;
         }
     }
+    public class Inspection : Calculator
+    {
+        public Inspection()
+        {
+            _partname = "none";
+            _partprice = 0.00m;
+            _laborhours = 0.75m;
+        }
+    }
 }

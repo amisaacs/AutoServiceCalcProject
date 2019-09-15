@@ -407,5 +407,73 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(103.60m, total);
 
         }
+        // Tests - Inspection – $15.00 - .75hours labor($15.00)
+        public void InspectionHasCorrectPartPrice()
+        {
+            //Arrange
+            Inspection c = new Inspection();
+
+            //Act
+            decimal price = c.Partprice;
+
+            //Assert
+            Assert.AreEqual(0.00m, price);
+
+        }
+
+        [TestMethod]
+        public void InspectionHasCorrectLaborHours()
+        {
+            //Arrange
+            Inspection c = new Inspection();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(0.75m, labor);
+        }
+
+        [TestMethod]
+        public void InspectionReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            Inspection c = new Inspection();
+
+            //Act
+            decimal laborcharge = c.getLaborCharge();
+
+            //Assert
+            Assert.AreEqual(15.00m, laborcharge);
+
+        }
+
+        [TestMethod]
+        public void InspectionCalculatesTaxCorrectly()
+        {
+            //Arrange
+            Inspection c = new Inspection();
+
+            //Act
+            decimal tax = c.getTax();
+
+            //Assert
+            Assert.AreEqual(0.00m, tax);
+
+        }
+
+        [TestMethod]
+        public void InspectionCalculatesTotalCorrectly()
+        {
+            //Arrange
+            Inspection c = new Inspection();
+
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(15.00m, total);
+
+        }
     }
 }
