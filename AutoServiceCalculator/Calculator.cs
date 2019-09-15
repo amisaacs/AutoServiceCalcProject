@@ -63,4 +63,13 @@ namespace AutoServiceCalculator
             _laborhours = 0.75m;    // 45 minutes
         }
     }
+    public class RadiatorFlush : Calculator
+    {
+        public RadiatorFlush()
+        {
+            _partname = "radiator fluid";
+            _partprice = 5.00m;
+            _laborhours = 1.25m;
+        }
+    }
 }

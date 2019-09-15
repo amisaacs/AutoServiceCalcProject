@@ -145,48 +145,132 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.75m, labor);
 
         }
-      
-      [TestMethod]
-      public void LubeJobReturnsCorrectLaborCharge()
-      {
-          //Arrange
-          LubeJob c = new LubeJob();
 
-          //Act
-          decimal laborcharge = c.getLaborCharge();
+        [TestMethod]
+        public void LubeJobReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            LubeJob c = new LubeJob();
 
-          //Assert
-          Assert.AreEqual(15.00m, laborcharge);
+            //Act
+            decimal laborcharge = c.getLaborCharge();
 
-      }
-        
-    [TestMethod]
-    public void LubeJobCalculatesTaxCorrectly()
-    {
-        //Arrange
-        LubeJob c = new LubeJob();
+            //Assert
+            Assert.AreEqual(15.00m, laborcharge);
 
-        //Act
-        decimal tax = c.getTax();
+        }
 
-        //Assert
-        Assert.AreEqual(0.18m, tax);
+        [TestMethod]
+        public void LubeJobCalculatesTaxCorrectly()
+        {
+            //Arrange
+            LubeJob c = new LubeJob();
 
-    }
-        
-            [TestMethod]
-            public void LubeJobCalculatesTotalCorrectly()
-            {
-                //Arrange
-                LubeJob c = new LubeJob();
+            //Act
+            decimal tax = c.getTax();
 
-                //Act
-                decimal total = c.calculateTotal();
+            //Assert
+            Assert.AreEqual(0.18m, tax);
 
-                //Assert
-                Assert.AreEqual(18.18m, total);
+        }
 
-            }
+        [TestMethod]
+        public void LubeJobCalculatesTotalCorrectly()
+        {
+            //Arrange
+            LubeJob c = new LubeJob();
 
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(18.18m, total);
+
+        }
+        // Tests for Radiator flush – 30.00 = 5.00 radiator fluid +1.25hours labor($25.00)
+        [TestMethod]
+        public void RadiatorFlushHasCorrectPartName()
+        {
+            //Arrange
+            RadiatorFlush c = new RadiatorFlush();
+
+            //Act
+            string part = c.Partname;
+
+            //Assert
+            Assert.AreEqual("radiator fluid", part);
+
+        }
+        /*
+        [TestMethod]
+        public void LubeHasCorrectPartPrice()
+        {
+            //Arrange
+            RadiatorFlush c = new RadiatorFlush();
+
+            //Act
+            decimal price = c.Partprice;
+
+            //Assert
+            Assert.AreEqual(3.00m, price);
+
+        }
+
+        [TestMethod]
+        public void LubeJobHasCorrectLaborHours()
+        {
+            //Arrange
+            RadiatorFlush c = new RadiatorFlush();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(0.75m, labor);
+
+        }
+
+        [TestMethod]
+        public void LubeJobReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            RadiatorFlush c = new RadiatorFlush();
+
+            //Act
+            decimal laborcharge = c.getLaborCharge();
+
+            //Assert
+            Assert.AreEqual(15.00m, laborcharge);
+
+        }
+
+        [TestMethod]
+        public void LubeJobCalculatesTaxCorrectly()
+        {
+            //Arrange
+            RadiatorFlush c = new RadiatorFlush();
+
+            //Act
+            decimal tax = c.getTax();
+
+            //Assert
+            Assert.AreEqual(0.18m, tax);
+
+        }
+
+        [TestMethod]
+        public void LubeJobCalculatesTotalCorrectly()
+        {
+            //Arrange
+            RadiatorFlush c = new RadiatorFlush();
+
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(18.18m, total);
+
+        }
+        */
     }
 }
