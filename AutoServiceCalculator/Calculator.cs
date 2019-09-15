@@ -4,6 +4,8 @@ namespace AutoServiceCalculator
 {
     public class Calculator
     {
+        const decimal TAX = .06m;
+        const decimal LABOR_RATE = 20.00m;
         protected string _partname { get; set; }
         protected decimal _partprice { get; set; }
         protected decimal _laborhours { get; set; }
@@ -31,11 +33,11 @@ namespace AutoServiceCalculator
         }
         public decimal getLaborCharge()
         {
-            return _laborhours * 20;
+            return _laborhours * LABOR_RATE;
         }
         public decimal getTax()
         {
-            return 0.66m;
+            return _partprice * TAX;
         }
         public decimal calculateTotal()
         {
