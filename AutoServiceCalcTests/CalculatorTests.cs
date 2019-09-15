@@ -159,9 +159,9 @@ namespace AutoServiceCalcTests
           Assert.AreEqual(15.00m, laborcharge);
 
       }
-        /*
+        
     [TestMethod]
-    public void OilChangeCalculatesTaxCorrectly()
+    public void LubeJobCalculatesTaxCorrectly()
     {
         //Arrange
         LubeJob c = new LubeJob();
@@ -170,10 +170,10 @@ namespace AutoServiceCalcTests
         decimal tax = c.getTax();
 
         //Assert
-        Assert.AreEqual(0.66m, tax);
+        Assert.AreEqual(0.18m, tax);
 
     }
-
+        /*
     [TestMethod]
     public void OilChangeCalculatesTotalCorrectly()
     {
