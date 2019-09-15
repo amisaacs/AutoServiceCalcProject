@@ -41,11 +41,11 @@ namespace AutoServiceCalculator
         }
         public decimal calculateTotal()
         {
-            return Math.Round(this.Partprice + getTax() + getLaborCharge(),2) ;
+            return Math.Round(this.Partprice + getTax() + getLaborCharge(), 2);
         }
     }
     public class OilChange : Calculator
-    { 
+    {
         public OilChange()
         {
             _partname = "oil";
@@ -70,6 +70,15 @@ namespace AutoServiceCalculator
             _partname = "radiator fluid";
             _partprice = 5.00m;
             _laborhours = 1.25m;
+        }
+    }
+    public class TransmissionFlush : Calculator
+    {
+        public TransmissionFlush()
+        {
+            _partname = "transmission fluid";
+            _partprice = 15.00m;
+            _laborhours = 3.25m;
         }
     }
 }

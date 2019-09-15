@@ -9,12 +9,12 @@ namespace AutoServiceCalcTests
        Break out parts and labor and tax (6% on parts only).
        Calculate total.
 
-       Oil change – $26.00 = $11.00 oil + .45hours labor($15.00)
-       Lube Job – $18.00 = $3.00 grease + .45hours labor($15.00)
-       Radiator flush – 30.00 = 5.00 radiator fluid +1.25hours labor($25.00)
-       Transmission flush – $80.00 = $15.00 transmission fluid + 3.25hours labor($65.00)
-       Inspection – $15.00 - .45hours labor($15.00)
-       Muffler replacement – $100.00 = $60.00 muffler + 2.0hours labor($40.00)
+       Oil change – $26.66 = $11.00 oil + .75hours labor($15.00)
+       Lube Job – $18.18 = $3.00 grease + .45hours labor($15.00)
+       Radiator flush – 30.30 = 5.00 radiator fluid +1.25hours labor($25.00)
+       Transmission flush – $80.90 = $15.00 transmission fluid + 3.25hours labor($65.00)
+       Muffler replacement – $103.60 = $60.00 muffler + 2.0hours labor($40.00)
+       Inspection – $15.00 - .75hours labor($15.00)
        Tire rotation – $20.00 = 1.0hour labor ($20.00)
 
        labor = $20.00/hour.  
@@ -187,7 +187,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(18.18m, total);
 
         }
-        // Tests for Radiator flush – 30.00 = 5.00 radiator fluid +1.25hours labor($25.00)
+        // Tests for Radiator flush – 30.30 = 5.00 radiator fluid +1.25hours labor($25.00)
         [TestMethod]
         public void RadiatorFlushHasCorrectPartName()
         {
@@ -201,9 +201,9 @@ namespace AutoServiceCalcTests
             Assert.AreEqual("radiator fluid", part);
 
         }
-        /*
+
         [TestMethod]
-        public void LubeHasCorrectPartPrice()
+        public void RadiatorFlushHasCorrectPartPrice()
         {
             //Arrange
             RadiatorFlush c = new RadiatorFlush();
@@ -212,12 +212,12 @@ namespace AutoServiceCalcTests
             decimal price = c.Partprice;
 
             //Assert
-            Assert.AreEqual(3.00m, price);
+            Assert.AreEqual(5.00m, price);
 
         }
-
+        
         [TestMethod]
-        public void LubeJobHasCorrectLaborHours()
+        public void RadiatorFlushHasCorrectLaborHours()
         {
             //Arrange
             RadiatorFlush c = new RadiatorFlush();
@@ -226,12 +226,11 @@ namespace AutoServiceCalcTests
             decimal labor = c.Laborhours;
 
             //Assert
-            Assert.AreEqual(0.75m, labor);
-
+            Assert.AreEqual(1.25m, labor);
         }
-
+        
         [TestMethod]
-        public void LubeJobReturnsCorrectLaborCharge()
+        public void RadiatorFlushReturnsCorrectLaborCharge()
         {
             //Arrange
             RadiatorFlush c = new RadiatorFlush();
@@ -240,12 +239,12 @@ namespace AutoServiceCalcTests
             decimal laborcharge = c.getLaborCharge();
 
             //Assert
-            Assert.AreEqual(15.00m, laborcharge);
+            Assert.AreEqual(25.00m, laborcharge);
 
         }
-
+        
         [TestMethod]
-        public void LubeJobCalculatesTaxCorrectly()
+        public void RadiatorFlushCalculatesTaxCorrectly()
         {
             //Arrange
             RadiatorFlush c = new RadiatorFlush();
@@ -254,12 +253,12 @@ namespace AutoServiceCalcTests
             decimal tax = c.getTax();
 
             //Assert
-            Assert.AreEqual(0.18m, tax);
+            Assert.AreEqual(0.30m, tax);
 
         }
-
+     
         [TestMethod]
-        public void LubeJobCalculatesTotalCorrectly()
+        public void RadiatorFlushCalculatesTotalCorrectly()
         {
             //Arrange
             RadiatorFlush c = new RadiatorFlush();
@@ -268,9 +267,77 @@ namespace AutoServiceCalcTests
             decimal total = c.calculateTotal();
 
             //Assert
-            Assert.AreEqual(18.18m, total);
+            Assert.AreEqual(30.30m, total);
 
         }
-        */
+
+        //Tests - Transmission flush – $80.90 = $15.00 transmission fluid + 3.25hours labor($65.00)
+        public void TransmissionFlushHasCorrectPartPrice()
+        {
+            //Arrange
+            TransmissionFlush c = new TransmissionFlush();
+
+            //Act
+            decimal price = c.Partprice;
+
+            //Assert
+            Assert.AreEqual(15.00m, price);
+
+        }
+
+        [TestMethod]
+        public void TransmissionFlushHasCorrectLaborHours()
+        {
+            //Arrange
+            TransmissionFlush c = new TransmissionFlush();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(3.25m, labor);
+        }
+
+        [TestMethod]
+        public void TransmissionFlushReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            TransmissionFlush c = new TransmissionFlush();
+
+            //Act
+            decimal laborcharge = c.getLaborCharge();
+
+            //Assert
+            Assert.AreEqual(65.00m, laborcharge);
+
+        }
+
+        [TestMethod]
+        public void TransmissionFlushCalculatesTaxCorrectly()
+        {
+            //Arrange
+            TransmissionFlush c = new TransmissionFlush();
+
+            //Act
+            decimal tax = c.getTax();
+
+            //Assert
+            Assert.AreEqual(0.90m, tax);
+
+        }
+
+        [TestMethod]
+        public void TransmissionFlushCalculatesTotalCorrectly()
+        {
+            //Arrange
+            TransmissionFlush c = new TransmissionFlush();
+
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(80.900m, total);
+
+        }
     }
 }
