@@ -4,43 +4,43 @@ namespace AutoServiceCalculator
 {
     public class Calculator
     {
-        private const decimal TAX = .06m;
+        private const double TAX = .06;
         protected string _partname { get; set; }
-        protected decimal _partprice { get; set; }
-        protected decimal _laborhours { get; set; }
+        protected double _partprice { get; set; }
+        protected double _laborhours { get; set; }
 
         public Calculator()
         {
             _partname = "No part";
-            _partprice = 0.0m;
-            _laborhours = 0.0m;
+            _partprice = 0.0;
+            _laborhours = 0.0;
         }
         public string Partname
         {
             get { return _partname; }
             set { _partname = value; }
         }
-        public decimal Partprice
+        public double Partprice
         {
             get { return _partprice; }
             set { _partprice = value; }
         }
-        public decimal Laborhours
+        public double Laborhours
         {
             get { return _laborhours; }
             set { _laborhours = value; }
         }
-        public decimal getLaborCharge()
+        public double getLaborCharge()
         {
-            return 15.00m;
+            return 15.00;
         }
-        public decimal getTax()
+        public double getTax()
         {
-            return _partprice * .06m;
+            return _partprice * .06;
         }
-        public decimal calculateTotal()
+        public double calculateTotal()
         {
-            return 26.00m;
+            return this.Partprice + getLaborCharge() + getTax();
         }
     }
     public class OilChange : Calculator
@@ -48,8 +48,8 @@ namespace AutoServiceCalculator
         public OilChange()
         {
             _partname = "oil";
-            _partprice = 11.00m;
-            _laborhours = 0.45m;
+            _partprice = 11.00;
+            _laborhours = 0.45;
         }
 
     }
@@ -58,8 +58,8 @@ namespace AutoServiceCalculator
         public LubeJob()
         {
             _partname = "grease";
-            _partprice = 3.00m;
-            _laborhours = 0.45m;
+            _partprice = 3.00;
+            _laborhours = 0.45;
         }
     }
 }

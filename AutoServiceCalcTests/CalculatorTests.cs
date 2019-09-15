@@ -43,10 +43,10 @@ namespace AutoServiceCalcTests
             OilChange c = new OilChange();
 
             //Act
-            decimal price = c.Partprice;
+            double price = c.Partprice;
 
             //Assert
-            Assert.AreEqual(11.00m, price);
+            Assert.AreEqual(11.00, price);
 
         }
         [TestMethod]
@@ -56,10 +56,10 @@ namespace AutoServiceCalcTests
             OilChange c = new OilChange();
 
             //Act
-            decimal labor = c.Laborhours;
+            double labor = c.Laborhours;
 
             //Assert
-            Assert.AreEqual(0.45m, labor);
+            Assert.AreEqual(0.45, labor);
 
         }
         [TestMethod]
@@ -69,10 +69,10 @@ namespace AutoServiceCalcTests
             OilChange c = new OilChange();
 
             //Act
-            decimal laborcharge = c.getLaborCharge();
+            double laborcharge = c.getLaborCharge();
 
             //Assert
-            Assert.AreEqual(15.00m, laborcharge);
+            Assert.AreEqual(15.00, laborcharge);
 
         }
         [TestMethod]
@@ -82,10 +82,10 @@ namespace AutoServiceCalcTests
             OilChange c = new OilChange();
 
             //Act
-            decimal tax = c.getTax();
+            double tax = c.getTax();
 
             //Assert
-            Assert.AreEqual(0.66m, tax);
+            Assert.AreEqual(0.66, tax,.01);
 
         }
 
@@ -96,10 +96,10 @@ namespace AutoServiceCalcTests
             OilChange c = new OilChange();
 
             //Act
-            decimal total = c.calculateTotal();
+            double total = c.calculateTotal();
 
             //Assert
-            Assert.AreEqual(26.00m, total);
+            Assert.AreEqual(26.66, total);
 
         }
 
@@ -125,10 +125,10 @@ namespace AutoServiceCalcTests
             LubeJob c = new LubeJob();
 
             //Act
-            decimal price = c.Partprice;
+            double price = c.Partprice;
 
             //Assert
-            Assert.AreEqual(3.00m, price);
+            Assert.AreEqual(3.00, price);
 
         }
 
@@ -139,10 +139,10 @@ namespace AutoServiceCalcTests
             LubeJob c = new LubeJob();
 
             //Act
-            decimal labor = c.Laborhours;
+            double labor = c.Laborhours;
 
             //Assert
-            Assert.AreEqual(0.45m, labor);
+            Assert.AreEqual(0.45, labor);
 
         }
       
@@ -153,10 +153,10 @@ namespace AutoServiceCalcTests
           LubeJob c = new LubeJob();
 
           //Act
-          decimal laborcharge = c.getLaborCharge();
+          double laborcharge = c.getLaborCharge();
 
           //Assert
-          Assert.AreEqual(15.00m, laborcharge);
+          Assert.AreEqual(15.00, laborcharge);
 
       }
         
@@ -167,27 +167,27 @@ namespace AutoServiceCalcTests
         LubeJob c = new LubeJob();
 
         //Act
-        decimal tax = c.getTax();
+        double tax = c.getTax();
 
         //Assert
-        Assert.AreEqual(0.18m, tax);
+        Assert.AreEqual(0.18, tax);
 
     }
-        /*
+    
     [TestMethod]
-    public void OilChangeCalculatesTotalCorrectly()
+    public void LubeJobCalculatesTotalCorrectly()
     {
         //Arrange
         LubeJob c = new LubeJob();
 
         //Act
-        decimal total = c.calculateTotal();
+        double total = c.calculateTotal();
 
         //Assert
-        Assert.AreEqual(26.00m, total);
+        Assert.AreEqual(18.18, total);
 
     }
 
-    */
+   
     }
 }
