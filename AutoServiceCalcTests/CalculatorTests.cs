@@ -215,7 +215,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(5.00m, price);
 
         }
-        
+
         [TestMethod]
         public void RadiatorFlushHasCorrectLaborHours()
         {
@@ -228,7 +228,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(1.25m, labor);
         }
-        
+
         [TestMethod]
         public void RadiatorFlushReturnsCorrectLaborCharge()
         {
@@ -242,7 +242,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(25.00m, laborcharge);
 
         }
-        
+
         [TestMethod]
         public void RadiatorFlushCalculatesTaxCorrectly()
         {
@@ -256,7 +256,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.30m, tax);
 
         }
-     
+
         [TestMethod]
         public void RadiatorFlushCalculatesTotalCorrectly()
         {
@@ -543,5 +543,17 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(20.00m, total);
 
         }
+
+        [TestMethod]
+
+        public void GivenOIlChangeAndLubeJobOjectsRepairBillCanBeCreated()
+        {
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RepairBill bill = new RepairBill(s1, s2);
+            Assert.IsNotNull(bill);
+        }
     }
+
 }
+

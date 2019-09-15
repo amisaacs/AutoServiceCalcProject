@@ -1,7 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AutoServiceCalculator
 {
+    public class RepairBill
+    {
+        protected List<Calculator> _servicesList { get; set; }
+        protected decimal _partTotal { get; set; }
+
+        public RepairBill(Calculator s1, Calculator s2)
+        {
+            _servicesList = setServices(s1,s2);
+            //getPartTotal();
+        }
+        public List<Calculator> setServices(Calculator s1, Calculator s2)
+        {
+            List<Calculator> list = new List<Calculator>();
+            list.Add(s1);
+            list.Add(s2);
+            return list;
+        }
+        public decimal getPartTotal()
+        {
+            decimal total = 0.0m;
+            foreach (Calculator s in _servicesList)
+            {
+                total += s.Partprice;
+            }
+            return total;
+        }
+    }
+
     public class Calculator
     {
         const decimal TAX = .06m;
