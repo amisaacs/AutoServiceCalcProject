@@ -5,25 +5,28 @@ namespace AutoServiceCalculator
 {
     public class RepairBill
     {
-        protected List<Calculator> _servicesList { get; set; }
+        protected List<Service> _servicesList { get; set; }
         protected decimal _partTotal { get; set; }
 
-        public RepairBill(Calculator s1, Calculator s2)
+        public RepairBill()
         {
-            _servicesList = setServices(s1,s2);
-            //getPartTotal();
+            _servicesList = new List<Service>();
         }
-        public List<Calculator> setServices(Calculator s1, Calculator s2)
+        public List<Service> setServices(Service s1, Service s2)
         {
-            List<Calculator> list = new List<Calculator>();
+            List<Service> list = new List<Service>();
             list.Add(s1);
             list.Add(s2);
             return list;
         }
+        public void addService(Service s1)
+        {
+            _servicesList.Add(s1);
+        }
         public decimal getPartTotal()
         {
             decimal total = 0.0m;
-            foreach (Calculator s in _servicesList)
+            foreach (Service s in _servicesList)
             {
                 total += s.Partprice;
             }
@@ -31,7 +34,7 @@ namespace AutoServiceCalculator
         }
     }
 
-    public class Calculator
+    public class Service
     {
         const decimal TAX = .06m;
         const decimal LABOR_RATE = 20.00m;
@@ -39,7 +42,7 @@ namespace AutoServiceCalculator
         protected decimal _partprice { get; set; }
         protected decimal _laborhours { get; set; }
 
-        public Calculator()
+        public Service()
         {
             _partname = "No part";
             _partprice = 0.0m;
@@ -73,7 +76,7 @@ namespace AutoServiceCalculator
             return Math.Round(this.Partprice + getTax() + getLaborCharge(), 2);
         }
     }
-    public class OilChange : Calculator
+    public class OilChange : Service
     {
         public OilChange()
         {
@@ -83,7 +86,7 @@ namespace AutoServiceCalculator
         }
 
     }
-    public class LubeJob : Calculator
+    public class LubeJob : Service
     {
         public LubeJob()
         {
@@ -92,7 +95,7 @@ namespace AutoServiceCalculator
             _laborhours = 0.75m;    // 45 minutes
         }
     }
-    public class RadiatorFlush : Calculator
+    public class RadiatorFlush : Service
     {
         public RadiatorFlush()
         {
@@ -101,7 +104,7 @@ namespace AutoServiceCalculator
             _laborhours = 1.25m;
         }
     }
-    public class TransmissionFlush : Calculator
+    public class TransmissionFlush : Service
     {
         public TransmissionFlush()
         {
@@ -111,7 +114,7 @@ namespace AutoServiceCalculator
         }
     }
 
-    public class MufflerReplacement : Calculator
+    public class MufflerReplacement : Service
     {
         public MufflerReplacement()
         {
@@ -120,7 +123,7 @@ namespace AutoServiceCalculator
             _laborhours = 2.0m;
         }
     }
-    public class Inspection : Calculator
+    public class Inspection : Service
     {
         public Inspection()
         {
@@ -129,7 +132,7 @@ namespace AutoServiceCalculator
             _laborhours = 0.75m;
         }
     }
-    public class TireRotation : Calculator
+    public class TireRotation : Service
     {
         public TireRotation()
         {

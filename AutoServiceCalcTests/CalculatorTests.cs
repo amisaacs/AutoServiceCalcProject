@@ -544,22 +544,51 @@ namespace AutoServiceCalcTests
 
         }
 
+        //Tests - total parts calculates correctly
         [TestMethod]
         public void GivenOIlChangeAndLubeJobOjectsRepairBillCanBeCreated()
         {
+            // Arrange
             OilChange s1 = new OilChange();
             LubeJob s2 = new LubeJob();
-            RepairBill bill = new RepairBill(s1, s2);
+            RepairBill bill = new RepairBill();
+
+            // Act
+            bill.addService(s1);
+            bill.addService(s2);
+
+            // Assert
             Assert.IsNotNull(bill);
         }
         [TestMethod]
         public void GivenOIlChangeAndLubeJobOjectsPartTotalIsCorrect()
         {
+            // Arrange
             OilChange s1 = new OilChange();
             LubeJob s2 = new LubeJob();
-            RepairBill bill = new RepairBill(s1, s2);
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
             decimal total = bill.getPartTotal();
             Assert.AreEqual(14.00m,total);
+        }
+        [TestMethod]
+        public void GivenThreeServicesPartTotalIsCorrect()
+        {
+            //Arrange
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RadiatorFlush s3 = new RadiatorFlush();
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
+            bill.addService(s3);
+
+            //Act
+            decimal total = bill.getPartTotal();
+
+            //Assert
+            Assert.AreEqual(19.00m, total);
         }
     }
 
