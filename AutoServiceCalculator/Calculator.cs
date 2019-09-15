@@ -6,11 +6,13 @@ namespace AutoServiceCalculator
     {
         protected string _partname { get; set; }
         protected decimal _partprice { get; set; }
+        protected decimal _laborhours { get; set; }
 
         public Calculator()
         {
             _partname = "No part";
             _partprice = 0.0m;
+            _laborhours = 0.0m;
         }
         public string Partname
         {
@@ -22,22 +24,11 @@ namespace AutoServiceCalculator
             get { return _partprice; }
             set { _partprice = value; }
         }
-        /*
-        public string getOilChangePartName()
+        public decimal Laborhours
         {
-            return partname;
+            get { return _laborhours; }
+            set { _laborhours = value; }
         }
-
-        public decimal getOilChangePartPrice()
-        {
-            return partprice;
-        }
-
-        public string getLubeJobPartPrice()
-        {
-            return partname;
-        }
-        */
     }
     public class OilChange : Calculator
     { 
@@ -45,6 +36,7 @@ namespace AutoServiceCalculator
         {
             _partname = "oil";
             _partprice = 11.00m;
+            _laborhours = 0.45m;
         }
     }
     public class LubeJob : Calculator

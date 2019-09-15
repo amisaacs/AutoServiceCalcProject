@@ -50,6 +50,19 @@ namespace AutoServiceCalcTests
 
         }
         [TestMethod]
+        public void OilChangeHasCorrectLaborHours()
+        {
+            //Arrange
+            OilChange c = new OilChange();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(0.45m, labor);
+
+        }
+        [TestMethod]
         public void LubeJobHasCorrectPartName()
         {
             //Arrange
