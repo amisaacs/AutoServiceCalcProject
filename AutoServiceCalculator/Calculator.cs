@@ -58,6 +58,7 @@ namespace AutoServiceCalculator
         {
             _partname = "grease";
             _partprice = 3.00m;
+            _laborhours = 0.45m;
         }
     }
 }

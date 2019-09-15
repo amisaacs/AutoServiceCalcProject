@@ -117,76 +117,76 @@ namespace AutoServiceCalcTests
             Assert.AreEqual("grease", part);
 
         }
-  
+
+        [TestMethod]
+        public void LubeHasCorrectPartPrice()
+        {
+            //Arrange
+            LubeJob c = new LubeJob();
+
+            //Act
+            decimal price = c.Partprice;
+
+            //Assert
+            Assert.AreEqual(3.00m, price);
+
+        }
+
+        [TestMethod]
+        public void LubeJobHasCorrectLaborHours()
+        {
+            //Arrange
+            LubeJob c = new LubeJob();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(0.45m, labor);
+
+        }
+        /*
       [TestMethod]
-      public void LubeHasCorrectPartPrice()
+      public void OilChangeReturnsCorrectLaborCharge()
       {
           //Arrange
           LubeJob c = new LubeJob();
 
           //Act
-          decimal price = c.Partprice;
+          decimal laborcharge = c.getLaborCharge();
 
           //Assert
-          Assert.AreEqual(3.00m, price);
+          Assert.AreEqual(15.00m, laborcharge);
 
       }
-        /*
-             [TestMethod]
-             public void LubeJobHasCorrectLaborHours()
-             {
-                 //Arrange
-                 LubeJob c = new LubeJob();
+      [TestMethod]
+      public void OilChangeCalculatesTaxCorrectly()
+      {
+          //Arrange
+          LubeJob c = new LubeJob();
 
-                 //Act
-                 decimal labor = c.Laborhours;
+          //Act
+          decimal tax = c.getTax();
 
-                 //Assert
-                 Assert.AreEqual(0.45m, labor);
+          //Assert
+          Assert.AreEqual(0.66m, tax);
 
-             }
+      }
 
-       [TestMethod]
-       public void OilChangeReturnsCorrectLaborCharge()
-       {
-           //Arrange
-           LubeJob c = new LubeJob();
+      [TestMethod]
+      public void OilChangeCalculatesTotalCorrectly()
+      {
+          //Arrange
+          LubeJob c = new LubeJob();
 
-           //Act
-           decimal laborcharge = c.getLaborCharge();
+          //Act
+          decimal total = c.calculateTotal();
 
-           //Assert
-           Assert.AreEqual(15.00m, laborcharge);
+          //Assert
+          Assert.AreEqual(26.00m, total);
 
-       }
-       [TestMethod]
-       public void OilChangeCalculatesTaxCorrectly()
-       {
-           //Arrange
-           LubeJob c = new LubeJob();
+      }
 
-           //Act
-           decimal tax = c.getTax();
-
-           //Assert
-           Assert.AreEqual(0.66m, tax);
-
-       }
-
-       [TestMethod]
-       public void OilChangeCalculatesTotalCorrectly()
-       {
-           //Arrange
-           LubeJob c = new LubeJob();
-
-           //Act
-           decimal total = c.calculateTotal();
-
-           //Assert
-           Assert.AreEqual(26.00m, total);
-
-       }
-
-       */
+      */
     }
 }
