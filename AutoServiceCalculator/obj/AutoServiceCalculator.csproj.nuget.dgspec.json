@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amisaac\\source\\repos\\ProjectName\\AutoServiceCalculator\\AutoServiceCalculator.csproj": {}
+    "C:\\Users\\amisaac\\source\\repos\\AutoServiceCalcProject\\AutoServiceCalculator\\AutoServiceCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amisaac\\source\\repos\\ProjectName\\AutoServiceCalculator\\AutoServiceCalculator.csproj": {
+    "C:\\Users\\amisaac\\source\\repos\\AutoServiceCalcProject\\AutoServiceCalculator\\AutoServiceCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amisaac\\source\\repos\\ProjectName\\AutoServiceCalculator\\AutoServiceCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\amisaac\\source\\repos\\AutoServiceCalcProject\\AutoServiceCalculator\\AutoServiceCalculator.csproj",
         "projectName": "AutoServiceCalculator",
-        "projectPath": "C:\\Users\\amisaac\\source\\repos\\ProjectName\\AutoServiceCalculator\\AutoServiceCalculator.csproj",
+        "projectPath": "C:\\Users\\amisaac\\source\\repos\\AutoServiceCalcProject\\AutoServiceCalculator\\AutoServiceCalculator.csproj",
         "packagesPath": "C:\\Users\\amisaac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amisaac\\source\\repos\\ProjectName\\AutoServiceCalculator\\obj\\",
+        "outputPath": "C:\\Users\\amisaac\\source\\repos\\AutoServiceCalcProject\\AutoServiceCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

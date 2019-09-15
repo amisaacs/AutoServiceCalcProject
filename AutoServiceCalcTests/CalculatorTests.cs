@@ -32,7 +32,21 @@ namespace AutoServiceCalcTests
             string part = c.getOilChangePartName();
 
             //Assert
-            Assert.AreEqual("Oil", part);
+            Assert.AreEqual("oil", part);
+
+        }
+
+        [TestMethod]
+        public void OilChangeHasCorrectPartPrice()
+        {
+            //Arrange
+            Calculator c = new Calculator();
+
+            //Act
+            decimal price = c.getOilChangePartPrice();
+
+            //Assert
+            Assert.AreEqual(11.00m, price);
 
         }
     }

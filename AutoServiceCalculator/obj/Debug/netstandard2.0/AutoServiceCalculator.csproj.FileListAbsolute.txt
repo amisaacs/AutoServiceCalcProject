@@ -16,3 +16,12 @@ C:\Users\amisaac\source\repos\ProjectName\AutoServiceCalculator\obj\Debug\netsta
 C:\Users\amisaac\source\repos\ProjectName\AutoServiceCalculator\bin\Debug\netstandard2.0\AutoServiceCalculator.deps.json
 C:\Users\amisaac\source\repos\ProjectName\AutoServiceCalculator\bin\Debug\netstandard2.0\AutoServiceCalculator.dll
 C:\Users\amisaac\source\repos\ProjectName\AutoServiceCalculator\bin\Debug\netstandard2.0\AutoServiceCalculator.pdb
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\bin\Debug\netstandard2.0\AutoServiceCalculator.deps.json
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\bin\Debug\netstandard2.0\AutoServiceCalculator.dll
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\bin\Debug\netstandard2.0\AutoServiceCalculator.pdb
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\obj\Debug\netstandard2.0\AutoServiceCalculator.csprojAssemblyReference.cache
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\obj\Debug\netstandard2.0\AutoServiceCalculator.csproj.CoreCompileInputs.cache
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\obj\Debug\netstandard2.0\AutoServiceCalculator.AssemblyInfoInputs.cache
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\obj\Debug\netstandard2.0\AutoServiceCalculator.AssemblyInfo.cs
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\obj\Debug\netstandard2.0\AutoServiceCalculator.dll
+C:\Users\amisaac\source\repos\AutoServiceCalcProject\AutoServiceCalculator\obj\Debug\netstandard2.0\AutoServiceCalculator.pdb

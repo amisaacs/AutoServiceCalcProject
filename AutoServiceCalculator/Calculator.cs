@@ -4,10 +4,17 @@ namespace AutoServiceCalculator
 {
     public class Calculator
     {
+        string partname = "oil";
+        decimal partprice = 11.00m;
+
         public string getOilChangePartName()
         {
-            return "Oil";
+            return partname;
         }
-       
+
+        public decimal getOilChangePartPrice()
+        {
+            return partprice;
+        }
     }
 }
