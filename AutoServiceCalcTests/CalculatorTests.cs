@@ -634,6 +634,30 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(94.00m, total);
         }
+        [TestMethod]
+        public void GivenSixServicesPartTotalIsCorrect()
+        {
+            //Arrange
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RadiatorFlush s3 = new RadiatorFlush();
+            TransmissionFlush s4 = new TransmissionFlush();
+            MufflerReplacement s5 = new MufflerReplacement();
+            Inspection s6 = new Inspection();
+
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
+            bill.addService(s3);
+            bill.addService(s4);
+            bill.addService(s5);
+
+            //Act
+            decimal total = bill.getPartTotal();
+
+            //Assert
+            Assert.AreEqual(94.00m, total);
+        }
     }
 
 }
