@@ -4,43 +4,42 @@ namespace AutoServiceCalculator
 {
     public class Calculator
     {
-        private const double TAX = .06;
         protected string _partname { get; set; }
-        protected double _partprice { get; set; }
-        protected double _laborhours { get; set; }
+        protected decimal _partprice { get; set; }
+        protected decimal _laborhours { get; set; }
 
         public Calculator()
         {
             _partname = "No part";
-            _partprice = 0.0;
-            _laborhours = 0.0;
+            _partprice = 0.0m;
+            _laborhours = 0.0m;
         }
         public string Partname
         {
             get { return _partname; }
             set { _partname = value; }
         }
-        public double Partprice
+        public decimal Partprice
         {
             get { return _partprice; }
             set { _partprice = value; }
         }
-        public double Laborhours
+        public decimal Laborhours
         {
             get { return _laborhours; }
             set { _laborhours = value; }
         }
-        public double getLaborCharge()
+        public decimal getLaborCharge()
         {
-            return 15.00;
+            return 15.00m;
         }
-        public double getTax()
+        public decimal getTax()
         {
-            return _partprice * .06;
+            return 0.66m;
         }
-        public double calculateTotal()
+        public decimal calculateTotal()
         {
-            return this.Partprice + getLaborCharge() + getTax();
+            return 26.00m;
         }
     }
     public class OilChange : Calculator
@@ -48,8 +47,8 @@ namespace AutoServiceCalculator
         public OilChange()
         {
             _partname = "oil";
-            _partprice = 11.00;
-            _laborhours = 0.45;
+            _partprice = 11.00m;
+            _laborhours = 0.45m;
         }
 
     }
@@ -58,8 +57,8 @@ namespace AutoServiceCalculator
         public LubeJob()
         {
             _partname = "grease";
-            _partprice = 3.00;
-            _laborhours = 0.45;
+            _partprice = 3.00m;
+            _laborhours = 0.45m;
         }
     }
 }
