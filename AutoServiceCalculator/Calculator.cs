@@ -29,6 +29,10 @@ namespace AutoServiceCalculator
             get { return _laborhours; }
             set { _laborhours = value; }
         }
+        public decimal getLaborCharge()
+        {
+            return 15.00m;
+        }
     }
     public class OilChange : Calculator
     { 
@@ -38,10 +42,7 @@ namespace AutoServiceCalculator
             _partprice = 11.00m;
             _laborhours = 0.45m;
         }
-        public decimal getLaborCharge()
-        {
-            return 15.00m;
-        }
+       
     }
     public class LubeJob : Calculator
     {
