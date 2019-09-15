@@ -63,6 +63,19 @@ namespace AutoServiceCalcTests
 
         }
         [TestMethod]
+        public void OilChangeReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            OilChange c = new OilChange();
+
+            //Act
+            decimal laborcharge = c.getLaborCharge();
+
+            //Assert
+            Assert.AreEqual(15.00m, laborcharge);
+
+        }
+        [TestMethod]
         public void LubeJobHasCorrectPartName()
         {
             //Arrange
