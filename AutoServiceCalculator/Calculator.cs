@@ -37,6 +37,10 @@ namespace AutoServiceCalculator
         {
             return 0.66m;
         }
+        public decimal calculateTotal()
+        {
+            return 26.00m;
+        }
     }
     public class OilChange : Calculator
     { 

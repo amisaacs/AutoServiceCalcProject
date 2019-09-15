@@ -88,6 +88,20 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.66m, tax);
 
         }
+
+        [TestMethod]
+        public void OilChangeCalculatesTotalCorrectly()
+        {
+            //Arrange
+            OilChange c = new OilChange();
+
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(26.00m, total);
+
+        }
         [TestMethod]
         public void LubeJobHasCorrectPartName()
         {
