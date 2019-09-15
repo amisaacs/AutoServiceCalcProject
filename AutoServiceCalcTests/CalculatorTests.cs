@@ -82,10 +82,10 @@ namespace AutoServiceCalcTests
             OilChange c = new OilChange();
 
             //Act
-            decimal laborcharge = c.getLaborCharge();
+            decimal tax = c.getTax();
 
             //Assert
-            Assert.AreEqual(15.00m, laborcharge);
+            Assert.AreEqual(0.66m, tax);
 
         }
         [TestMethod]

@@ -33,6 +33,10 @@ namespace AutoServiceCalculator
         {
             return 15.00m;
         }
+        public decimal getTax()
+        {
+            return 0.66m;
+        }
     }
     public class OilChange : Calculator
     { 
@@ -42,7 +46,7 @@ namespace AutoServiceCalculator
             _partprice = 11.00m;
             _laborhours = 0.45m;
         }
-       
+
     }
     public class LubeJob : Calculator
     {
