@@ -99,7 +99,7 @@ namespace AutoServiceCalcTests
             decimal total = c.calculateTotal();
 
             //Assert
-            Assert.AreEqual(26.00m, total);
+            Assert.AreEqual(26.66m, total);
 
         }
 
@@ -173,9 +173,9 @@ namespace AutoServiceCalcTests
         Assert.AreEqual(0.18m, tax);
 
     }
-        /*
+        
             [TestMethod]
-            public void OilChangeCalculatesTotalCorrectly()
+            public void LubeJobCalculatesTotalCorrectly()
             {
                 //Arrange
                 LubeJob c = new LubeJob();
@@ -184,10 +184,9 @@ namespace AutoServiceCalcTests
                 decimal total = c.calculateTotal();
 
                 //Assert
-                Assert.AreEqual(26.00m, total);
+                Assert.AreEqual(18.18m, total);
 
             }
 
-            */
     }
 }

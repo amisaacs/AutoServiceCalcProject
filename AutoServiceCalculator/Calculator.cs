@@ -41,7 +41,7 @@ namespace AutoServiceCalculator
         }
         public decimal calculateTotal()
         {
-            return 26.00m;
+            return Math.Round(this.Partprice + getTax() + getLaborCharge(),2) ;
         }
     }
     public class OilChange : Calculator
