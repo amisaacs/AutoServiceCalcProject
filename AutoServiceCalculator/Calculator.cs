@@ -81,4 +81,13 @@ namespace AutoServiceCalculator
             _laborhours = 3.25m;
         }
     }
+    public class MufflerReplacement : Calculator
+    {
+        public MufflerReplacement()
+        {
+            _partname = "muffler";
+            _partprice = 60.00m;
+            _laborhours = 2.0m;
+        }
+    }
 }

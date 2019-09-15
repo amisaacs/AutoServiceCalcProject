@@ -339,5 +339,73 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(80.900m, total);
 
         }
+        // Tests - Muffler replacement – $103.60 = $60.00 muffler + 2.0hours labor($40.00)
+        public void MufflerReplacementHasCorrectPartPrice()
+        {
+            //Arrange
+            MufflerReplacement c = new MufflerReplacement();
+
+            //Act
+            decimal price = c.Partprice;
+
+            //Assert
+            Assert.AreEqual(60.00m, price);
+
+        }
+
+        [TestMethod]
+        public void MufflerReplacementHasCorrectLaborHours()
+        {
+            //Arrange
+            MufflerReplacement c = new MufflerReplacement();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(2.00m, labor);
+        }
+
+        [TestMethod]
+        public void MufflerReplacementReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            MufflerReplacement c = new MufflerReplacement();
+
+            //Act
+            decimal laborcharge = c.getLaborCharge();
+
+            //Assert
+            Assert.AreEqual(40.00m, laborcharge);
+
+        }
+
+        [TestMethod]
+        public void MufflerReplacementCalculatesTaxCorrectly()
+        {
+            //Arrange
+            MufflerReplacement c = new MufflerReplacement();
+
+            //Act
+            decimal tax = c.getTax();
+
+            //Assert
+            Assert.AreEqual(3.60m, tax);
+
+        }
+
+        [TestMethod]
+        public void MufflerReplacementCalculatesTotalCorrectly()
+        {
+            //Arrange
+            MufflerReplacement c = new MufflerReplacement();
+
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(103.60m, total);
+
+        }
     }
 }
