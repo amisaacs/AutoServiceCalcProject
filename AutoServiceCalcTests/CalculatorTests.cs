@@ -475,5 +475,73 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, total);
 
         }
+        // Tests - Tire rotation – $20.00 = 1.0hour labor ($20.00)
+        public void TireRotationHasCorrectPartPrice()
+        {
+            //Arrange
+            TireRotation c = new TireRotation();
+
+            //Act
+            decimal price = c.Partprice;
+
+            //Assert
+            Assert.AreEqual(0.00m, price);
+
+        }
+
+        [TestMethod]
+        public void TireRotationHasCorrectLaborHours()
+        {
+            //Arrange
+            TireRotation c = new TireRotation();
+
+            //Act
+            decimal labor = c.Laborhours;
+
+            //Assert
+            Assert.AreEqual(1.0m, labor);
+        }
+
+        [TestMethod]
+        public void TireRotationReturnsCorrectLaborCharge()
+        {
+            //Arrange
+            TireRotation c = new TireRotation();
+
+            //Act
+            decimal laborcharge = c.getLaborCharge();
+
+            //Assert
+            Assert.AreEqual(20.00m, laborcharge);
+
+        }
+
+        [TestMethod]
+        public void TireRotationCalculatesTaxCorrectly()
+        {
+            //Arrange
+            TireRotation c = new TireRotation();
+
+            //Act
+            decimal tax = c.getTax();
+
+            //Assert
+            Assert.AreEqual(0.00m, tax);
+
+        }
+
+        [TestMethod]
+        public void TireRotationCalculatesTotalCorrectly()
+        {
+            //Arrange
+            TireRotation c = new TireRotation();
+
+            //Act
+            decimal total = c.calculateTotal();
+
+            //Assert
+            Assert.AreEqual(20.00m, total);
+
+        }
     }
 }

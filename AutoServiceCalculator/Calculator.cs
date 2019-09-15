@@ -81,6 +81,7 @@ namespace AutoServiceCalculator
             _laborhours = 3.25m;
         }
     }
+
     public class MufflerReplacement : Calculator
     {
         public MufflerReplacement()
@@ -97,6 +98,15 @@ namespace AutoServiceCalculator
             _partname = "none";
             _partprice = 0.00m;
             _laborhours = 0.75m;
+        }
+    }
+    public class TireRotation : Calculator
+    {
+        public TireRotation()
+        {
+            _partname = "none";
+            _partprice = 0.00m;
+            _laborhours = 1.0m;
         }
     }
 }
