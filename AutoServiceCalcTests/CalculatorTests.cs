@@ -6,8 +6,8 @@ namespace AutoServiceCalcTests
 {
     /*
        Calculate the total amount of a repair bill,
-       Break out parts and labor
-       Include 6% sales tax on parts
+       Break out parts and labor and tax (6% on parts only).
+       Calculate total.
 
        Oil change – $26.00 = $11.00 oil + .45hours labor($15.00)
        Lube Job – $18.00 = $3.00 grease + .45hours labor($15.00)
@@ -102,6 +102,8 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(26.00m, total);
 
         }
+
+        // LubeJob Tests
         [TestMethod]
         public void LubeJobHasCorrectPartName()
         {
@@ -115,5 +117,76 @@ namespace AutoServiceCalcTests
             Assert.AreEqual("grease", part);
 
         }
+  
+      [TestMethod]
+      public void LubeHasCorrectPartPrice()
+      {
+          //Arrange
+          LubeJob c = new LubeJob();
+
+          //Act
+          decimal price = c.Partprice;
+
+          //Assert
+          Assert.AreEqual(3.00m, price);
+
+      }
+        /*
+             [TestMethod]
+             public void LubeJobHasCorrectLaborHours()
+             {
+                 //Arrange
+                 LubeJob c = new LubeJob();
+
+                 //Act
+                 decimal labor = c.Laborhours;
+
+                 //Assert
+                 Assert.AreEqual(0.45m, labor);
+
+             }
+
+       [TestMethod]
+       public void OilChangeReturnsCorrectLaborCharge()
+       {
+           //Arrange
+           LubeJob c = new LubeJob();
+
+           //Act
+           decimal laborcharge = c.getLaborCharge();
+
+           //Assert
+           Assert.AreEqual(15.00m, laborcharge);
+
+       }
+       [TestMethod]
+       public void OilChangeCalculatesTaxCorrectly()
+       {
+           //Arrange
+           LubeJob c = new LubeJob();
+
+           //Act
+           decimal tax = c.getTax();
+
+           //Assert
+           Assert.AreEqual(0.66m, tax);
+
+       }
+
+       [TestMethod]
+       public void OilChangeCalculatesTotalCorrectly()
+       {
+           //Arrange
+           LubeJob c = new LubeJob();
+
+           //Act
+           decimal total = c.calculateTotal();
+
+           //Assert
+           Assert.AreEqual(26.00m, total);
+
+       }
+
+       */
     }
 }
