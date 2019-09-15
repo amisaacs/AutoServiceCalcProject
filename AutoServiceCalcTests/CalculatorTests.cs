@@ -26,10 +26,10 @@ namespace AutoServiceCalcTests
         public void OilChangeHasCorrectParts()
         {
             //Arrange
-            Calculator c = new Calculator();
+            OilChange c = new OilChange();
 
             //Act
-            string part = c.getOilChangePartName();
+            string part = c.Partname;
 
             //Assert
             Assert.AreEqual("oil", part);
@@ -40,13 +40,26 @@ namespace AutoServiceCalcTests
         public void OilChangeHasCorrectPartPrice()
         {
             //Arrange
-            Calculator c = new Calculator();
+            OilChange c = new OilChange();
 
             //Act
-            decimal price = c.getOilChangePartPrice();
+            decimal price = c.Partprice;
 
             //Assert
             Assert.AreEqual(11.00m, price);
+
+        }
+        [TestMethod]
+        public void LubeJobHasCorrectPartName()
+        {
+            //Arrange
+            LubeJob c = new LubeJob();
+
+            //Act
+            string part = c.Partname;
+
+            //Assert
+            Assert.AreEqual("grease", part);
 
         }
     }
