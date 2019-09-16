@@ -771,7 +771,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(5.64m, total);
         }
-        /*
+        
         [TestMethod]
         public void serviceIsRemoved()
         {
@@ -802,7 +802,7 @@ namespace AutoServiceCalcTests
             // Assert
             Assert.AreEqual(6, length);
         }
-        */
+        
         [TestMethod]
         public void twoServicesWithSameValuesAreEqual()
         {

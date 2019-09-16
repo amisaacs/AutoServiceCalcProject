@@ -29,7 +29,16 @@ namespace AutoServiceCalculator
         }
         public void removeService(Service service)
         {
-            
+            Service serviceToDelete = null;
+            foreach(Service s in _servicesList)
+            {
+                if (service.Equals(s))
+                {
+                    serviceToDelete =s;
+                }
+            }
+            if(!serviceToDelete.Equals(null))
+                _servicesList.Remove(serviceToDelete);
         }
         public decimal getPartTotal()
         {
