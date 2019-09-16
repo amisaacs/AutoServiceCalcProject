@@ -771,6 +771,51 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(5.64m, total);
         }
+        /*
+        [TestMethod]
+        public void serviceIsRemoved()
+        {
+            //Arrange
+            MufflerReplacement muffler = new MufflerReplacement();
+
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RadiatorFlush s3 = new RadiatorFlush();
+            TransmissionFlush s4 = new TransmissionFlush();
+            MufflerReplacement s5 = new MufflerReplacement();
+            Inspection s6 = new Inspection();
+            TireRotation s7 = new TireRotation();
+
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
+            bill.addService(s3);
+            bill.addService(s4);
+            bill.addService(s5);
+            bill.addService(s6);
+            bill.addService(s7);
+
+            // Act
+            bill.removeService(muffler);
+            int length = bill.getServices().Count;
+
+            // Assert
+            Assert.AreEqual(6, length);
+        }
+        */
+        [TestMethod]
+        public void twoServicesWithSameValuesAreEqual()
+        {
+            //Arrange
+            MufflerReplacement m = new MufflerReplacement();
+            MufflerReplacement m2 = new MufflerReplacement();
+
+            //Act
+            Boolean servicesAreEqual = m.Equals(m2);
+
+            //Assert
+            Assert.IsTrue(servicesAreEqual);
+        }
     }
 
 }

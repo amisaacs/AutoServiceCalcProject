@@ -19,9 +19,17 @@ namespace AutoServiceCalculator
             List<Service> list = new List<Service>{ s1,s2 };
             return list;
         }
+        public List<Service> getServices()
+        {
+            return _servicesList;
+        }
         public void addService(Service s1)
         {
             _servicesList.Add(s1);
+        }
+        public void removeService(Service service)
+        {
+            
         }
         public decimal getPartTotal()
         {
@@ -62,6 +70,8 @@ namespace AutoServiceCalculator
             }
             return Math.Round(total * TAX_RATE,2);
         }
+       
+
     }
 
     public class Service
@@ -105,6 +115,18 @@ namespace AutoServiceCalculator
             return Math.Round(this.Partprice + getTax() + getLaborCharge(), 2);
         }
         */
+        public override bool Equals(object obj)
+        {
+            var other = obj as Service;
+
+            if (other == null)
+                return false;
+
+            if (_partname != other.Partname || _partprice != other.Partprice)
+                return false;
+
+            return true;
+        }
     }
     public class OilChange : Service
     {
