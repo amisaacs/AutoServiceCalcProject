@@ -30,7 +30,7 @@ namespace AutoServiceCalculator
             {
                 total += s.Partprice;
             }
-            return total;
+            return Math.Round(total,2);
         }
         public decimal getLaborhoursTotal()
         {
@@ -39,7 +39,7 @@ namespace AutoServiceCalculator
             {
                 total += s.Laborhours;
             }
-            return total;
+            return Math.Round(total,2);
         }
 
         public decimal getLaborChargeTotal()
@@ -49,7 +49,7 @@ namespace AutoServiceCalculator
             {
                 total += s.Laborhours;
             }
-            return total * LABOR_RATE;
+            return Math.Round(total * LABOR_RATE,2);
 
         }
 
@@ -60,7 +60,7 @@ namespace AutoServiceCalculator
             {
                 total += s.Partprice;
             }
-            return total * TAX_RATE;
+            return Math.Round(total * TAX_RATE,2);
         }
     }
 
@@ -73,8 +73,8 @@ namespace AutoServiceCalculator
         public Service()
         {
             _partname = "No part";
-            _partprice = 0.0m;
-            _laborhours = 0.0m;
+            _partprice = 0.00m;
+            _laborhours = 0.00m;
         }
         public string Partname
         {
