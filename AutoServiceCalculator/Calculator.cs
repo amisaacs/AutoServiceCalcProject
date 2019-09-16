@@ -6,6 +6,7 @@ namespace AutoServiceCalculator
     public class RepairBill
     {
         private const decimal LABOR_RATE = 20.00M;
+        private const decimal TAX_RATE = .06m;
         protected List<Service> _servicesList { get; set; }
         protected decimal _partTotal { get; set; }
 
@@ -51,12 +52,20 @@ namespace AutoServiceCalculator
             return total * LABOR_RATE;
 
         }
+
+        public decimal getTaxTotal()
+        {
+            decimal total = 0.0m;
+            foreach (Service s in _servicesList)
+            {
+                total += s.Partprice;
+            }
+            return total * TAX_RATE;
+        }
     }
 
     public class Service
     {
-        const decimal TAX = .06m;
-        
         protected string _partname { get; set; }
         protected decimal _partprice { get; set; }
         protected decimal _laborhours { get; set; }
@@ -82,18 +91,20 @@ namespace AutoServiceCalculator
             get { return _laborhours; }
             set { _laborhours = value; }
         }
-        //public decimal getLaborCharge()
-        //{
-        //    return _laborhours * LABOR_RATE;
-        //}
+        /*
+        public decimal getLaborCharge()
+        {
+            return _laborhours * LABOR_RATE;
+        }
         public decimal getTax()
         {
             return _partprice * TAX;
         }
-        //public decimal calculateTotal()
-        //{
-        //    return Math.Round(this.Partprice + getTax() + getLaborCharge(), 2);
-        //}
+        public decimal calculateTotal()
+        {
+            return Math.Round(this.Partprice + getTax() + getLaborCharge(), 2);
+        }
+        */
     }
     public class OilChange : Service
     {

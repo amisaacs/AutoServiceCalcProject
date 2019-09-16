@@ -76,7 +76,6 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, laborcharge);
 
         }
-        */
         [TestMethod]
         public void OilChangeCalculatesTaxCorrectly()
         {
@@ -90,7 +89,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.66m, tax);
 
         }
-    /*
+    
         [TestMethod]
         public void OilChangeCalculatesTotalCorrectly()
         {
@@ -161,7 +160,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, laborcharge);
 
         }
-        */
+        
         [TestMethod]
         public void LubeJobCalculatesTaxCorrectly()
         {
@@ -175,7 +174,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.18m, tax);
 
         }
-        /*
+        
         [TestMethod]
         public void LubeJobCalculatesTotalCorrectly()
         {
@@ -245,7 +244,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(25.00m, laborcharge);
 
         }
-        */
+        
 
         [TestMethod]
         public void RadiatorFlushCalculatesTaxCorrectly()
@@ -260,7 +259,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.30m, tax);
 
         }
-        /*
+        
         [TestMethod]
         public void RadiatorFlushCalculatesTotalCorrectly()
         {
@@ -315,7 +314,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(65.00m, laborcharge);
 
         }
-        */
+        
         [TestMethod]
         public void TransmissionFlushCalculatesTaxCorrectly()
         {
@@ -329,7 +328,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.90m, tax);
 
         }
-        /*
+        
         [TestMethod]
         public void TransmissionFlushCalculatesTotalCorrectly()
         {
@@ -384,7 +383,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(40.00m, laborcharge);
 
         }
-        */
+        
         [TestMethod]
         public void MufflerReplacementCalculatesTaxCorrectly()
         {
@@ -398,7 +397,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(3.60m, tax);
 
         }
-        /*
+        
         [TestMethod]
         public void MufflerReplacementCalculatesTotalCorrectly()
         {
@@ -453,7 +452,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, laborcharge);
 
         }
-        */
+        
         [TestMethod]
         public void InspectionCalculatesTaxCorrectly()
         {
@@ -467,7 +466,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.00m, tax);
 
         }
-        /*
+        
         [TestMethod]
         public void InspectionCalculatesTotalCorrectly()
         {
@@ -522,7 +521,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(20.00m, laborcharge);
 
         }
-        */
+        
         [TestMethod]
         public void TireRotationCalculatesTaxCorrectly()
         {
@@ -536,7 +535,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.00m, tax);
 
         }
-        /*
+        
         [TestMethod]
         public void TireRotationCalculatesTotalCorrectly()
         {
@@ -744,6 +743,33 @@ namespace AutoServiceCalcTests
 
             //Assert
             Assert.AreEqual(195.00m, total);
+        }
+        [TestMethod]
+        public void GivenAllServicesTotalTaxIsCorrect()
+        {
+            //Arrange
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RadiatorFlush s3 = new RadiatorFlush();
+            TransmissionFlush s4 = new TransmissionFlush();
+            MufflerReplacement s5 = new MufflerReplacement();
+            Inspection s6 = new Inspection();
+            TireRotation s7 = new TireRotation();
+
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
+            bill.addService(s3);
+            bill.addService(s4);
+            bill.addService(s5);
+            bill.addService(s6);
+            bill.addService(s7);
+
+            //Act
+            decimal total = bill.getTaxTotal();
+
+            //Assert
+            Assert.AreEqual(5.64m, total);
         }
     }
 
