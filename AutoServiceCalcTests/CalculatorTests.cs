@@ -10,7 +10,7 @@ namespace AutoServiceCalcTests
        Calculate total.
 
        Oil change – $26.66 = $11.00 oil + .75hours labor($15.00)
-       Lube Job – $18.18 = $3.00 grease + .45hours labor($15.00)
+       Lube Job – $18.18 = $3.00 grease + .75hours labor($15.00)
        Radiator flush – 30.30 = 5.00 radiator fluid +1.25hours labor($25.00)
        Transmission flush – $80.90 = $15.00 transmission fluid + 3.25hours labor($65.00)
        Muffler replacement – $103.60 = $60.00 muffler + 2.0hours labor($40.00)
@@ -62,7 +62,8 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.75m, labor);
 
         }
-        [TestMethod]
+
+        /*[TestMethod]
         public void OilChangeReturnsCorrectLaborCharge()
         {
             //Arrange
@@ -75,6 +76,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, laborcharge);
 
         }
+        */
         [TestMethod]
         public void OilChangeCalculatesTaxCorrectly()
         {
@@ -88,7 +90,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.66m, tax);
 
         }
-
+    /*
         [TestMethod]
         public void OilChangeCalculatesTotalCorrectly()
         {
@@ -102,7 +104,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(26.66m, total);
 
         }
-
+        */
         // LubeJob Tests
         [TestMethod]
         public void LubeJobHasCorrectPartName()
@@ -145,7 +147,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.75m, labor);
 
         }
-
+        /*
         [TestMethod]
         public void LubeJobReturnsCorrectLaborCharge()
         {
@@ -159,7 +161,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, laborcharge);
 
         }
-
+        */
         [TestMethod]
         public void LubeJobCalculatesTaxCorrectly()
         {
@@ -173,7 +175,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.18m, tax);
 
         }
-
+        /*
         [TestMethod]
         public void LubeJobCalculatesTotalCorrectly()
         {
@@ -187,6 +189,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(18.18m, total);
 
         }
+        */
         // Tests for Radiator flush – 30.30 = 5.00 radiator fluid +1.25hours labor($25.00)
         [TestMethod]
         public void RadiatorFlushHasCorrectPartName()
@@ -228,7 +231,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(1.25m, labor);
         }
-
+        /*
         [TestMethod]
         public void RadiatorFlushReturnsCorrectLaborCharge()
         {
@@ -242,6 +245,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(25.00m, laborcharge);
 
         }
+        */
 
         [TestMethod]
         public void RadiatorFlushCalculatesTaxCorrectly()
@@ -256,7 +260,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.30m, tax);
 
         }
-
+        /*
         [TestMethod]
         public void RadiatorFlushCalculatesTotalCorrectly()
         {
@@ -270,7 +274,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(30.30m, total);
 
         }
-
+        */
         //Tests - Transmission flush – $80.90 = $15.00 transmission fluid + 3.25hours labor($65.00)
         public void TransmissionFlushHasCorrectPartPrice()
         {
@@ -297,7 +301,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(3.25m, labor);
         }
-
+        /*
         [TestMethod]
         public void TransmissionFlushReturnsCorrectLaborCharge()
         {
@@ -311,7 +315,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(65.00m, laborcharge);
 
         }
-
+        */
         [TestMethod]
         public void TransmissionFlushCalculatesTaxCorrectly()
         {
@@ -325,7 +329,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.90m, tax);
 
         }
-
+        /*
         [TestMethod]
         public void TransmissionFlushCalculatesTotalCorrectly()
         {
@@ -339,6 +343,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(80.900m, total);
 
         }
+        */
         // Tests - Muffler replacement – $103.60 = $60.00 muffler + 2.0hours labor($40.00)
         public void MufflerReplacementHasCorrectPartPrice()
         {
@@ -365,7 +370,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(2.00m, labor);
         }
-
+        /*
         [TestMethod]
         public void MufflerReplacementReturnsCorrectLaborCharge()
         {
@@ -379,7 +384,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(40.00m, laborcharge);
 
         }
-
+        */
         [TestMethod]
         public void MufflerReplacementCalculatesTaxCorrectly()
         {
@@ -393,7 +398,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(3.60m, tax);
 
         }
-
+        /*
         [TestMethod]
         public void MufflerReplacementCalculatesTotalCorrectly()
         {
@@ -407,6 +412,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(103.60m, total);
 
         }
+        */
         // Tests - Inspection – $15.00 - .75hours labor($15.00)
         public void InspectionHasCorrectPartPrice()
         {
@@ -433,7 +439,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(0.75m, labor);
         }
-
+        /*
         [TestMethod]
         public void InspectionReturnsCorrectLaborCharge()
         {
@@ -447,7 +453,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, laborcharge);
 
         }
-
+        */
         [TestMethod]
         public void InspectionCalculatesTaxCorrectly()
         {
@@ -461,7 +467,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.00m, tax);
 
         }
-
+        /*
         [TestMethod]
         public void InspectionCalculatesTotalCorrectly()
         {
@@ -475,6 +481,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(15.00m, total);
 
         }
+        */
         // Tests - Tire rotation – $20.00 = 1.0hour labor ($20.00)
         public void TireRotationHasCorrectPartPrice()
         {
@@ -501,7 +508,7 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(1.0m, labor);
         }
-
+        /*
         [TestMethod]
         public void TireRotationReturnsCorrectLaborCharge()
         {
@@ -515,7 +522,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(20.00m, laborcharge);
 
         }
-
+        */
         [TestMethod]
         public void TireRotationCalculatesTaxCorrectly()
         {
@@ -529,7 +536,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(0.00m, tax);
 
         }
-
+        /*
         [TestMethod]
         public void TireRotationCalculatesTotalCorrectly()
         {
@@ -543,7 +550,7 @@ namespace AutoServiceCalcTests
             Assert.AreEqual(20.00m, total);
 
         }
-
+        */
         //Tests - total parts calculates correctly
         [TestMethod]
         public void GivenOIlChangeAndLubeJobOjectsRepairBillCanBeCreated()
@@ -683,7 +690,61 @@ namespace AutoServiceCalcTests
             //Assert
             Assert.AreEqual(94.00m, total);
         }
+        // Test labor calculates correctly
+        [TestMethod]
+        public void GivenAllServicesTotalLaborHoursIsCorrect()
+        {
+            //Arrange
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RadiatorFlush s3 = new RadiatorFlush();
+            TransmissionFlush s4 = new TransmissionFlush();
+            MufflerReplacement s5 = new MufflerReplacement();
+            Inspection s6 = new Inspection();
+            TireRotation s7 = new TireRotation();
 
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
+            bill.addService(s3);
+            bill.addService(s4);
+            bill.addService(s5);
+            bill.addService(s6);
+            bill.addService(s7);
+
+            //Act
+            decimal total = bill.getLaborhoursTotal();
+
+            //Assert
+            Assert.AreEqual(9.75m, total);
+        }
+        [TestMethod]
+        public void GivenAllServicesTotalLaborChargeIsCorrect()
+        {
+            //Arrange
+            OilChange s1 = new OilChange();
+            LubeJob s2 = new LubeJob();
+            RadiatorFlush s3 = new RadiatorFlush();
+            TransmissionFlush s4 = new TransmissionFlush();
+            MufflerReplacement s5 = new MufflerReplacement();
+            Inspection s6 = new Inspection();
+            TireRotation s7 = new TireRotation();
+
+            RepairBill bill = new RepairBill();
+            bill.addService(s1);
+            bill.addService(s2);
+            bill.addService(s3);
+            bill.addService(s4);
+            bill.addService(s5);
+            bill.addService(s6);
+            bill.addService(s7);
+
+            //Act
+            decimal total = bill.getLaborChargeTotal();
+
+            //Assert
+            Assert.AreEqual(195.00m, total);
+        }
     }
 
 }
